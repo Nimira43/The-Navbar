@@ -11,4 +11,11 @@ navLinks.forEach((navLink) => {
             }
         })
     })
+    if (window.innerWidth <= 430) {
+        let newText = `${navLink.textContent.split('')[0]} ${navLink.textContent.split('')[1]}`
+        navLink.textContent = newText
+    }
+    window.addEventListener('reaize', () => {
+        location.reload()
+    })
 })
